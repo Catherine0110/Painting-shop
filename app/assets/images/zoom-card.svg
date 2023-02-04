@@ -1,0 +1,24 @@
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="18" viewBox="0 0 10 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d35731;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1498" y="3250" width="10" height="18" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#231326"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Rounded_Rectangle_2_copy_12" data-name="Rounded Rectangle 2 copy 12" class="cls-1" d="M1506.86,3267.81l-8.68-8.37a0.634,0.634,0,0,1,0-.9,0.691,0.691,0,0,1,.93,0l8.68,8.37a0.617,0.617,0,0,1,0,.9A0.691,0.691,0,0,1,1506.86,3267.81Zm-8.68-8.37a0.634,0.634,0,0,1,0-.9l8.68-8.36a0.67,0.67,0,0,1,.93,0,0.605,0.605,0,0,1,0,.89l-8.68,8.37A0.67,0.67,0,0,1,1498.18,3259.44Z" transform="translate(-1498 -3250)"/>
+</svg> -->
+
+<svg viewBox="0 0 29.26 30.26" id="zoom" xmlns="http://www.w3.org/2000/svg">
+<!-- <path d="M3.5 28.34l9.43-9.61-1.39-1.4-9.62 9.44v-3.5H0v6.99h6.99v-1.92H3.5z" opacity=".95"></path> -->
+<path d="M3.5 27.34l9.43-9.61-1.39-1.4-9.62 9.44v-3.5H0v6.99h6.99v-1.92H3.5z"></path>
+<!-- <path d="M25.77 2.92l-9.44 9.62 1.4 1.39 9.61-9.43v3.49h1.92V1h-6.99v1.92h3.5z" opacity=".95"></path> -->
+<path d="M25.77 1.92l-9.44 9.62 1.4 1.39 9.61-9.43v3.49h1.92V0h-6.99v1.92h3.5z"></path>
+</svg>

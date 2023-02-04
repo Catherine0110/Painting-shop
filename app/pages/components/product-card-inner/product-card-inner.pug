@@ -1,0 +1,99 @@
+.section-product-card
+    .container 
+        .section-product-card__inner 
+            .section-product-card__pictures
+                .section-product-card__text-mobile
+                    h1.section-product-card__text-mobile-title Распоряжения о структуре очень длинное название картины 
+                    a(href="#").section-product-card__text-mobile-author Диана Миллер 
+                .section-product-card__images 
+                    .section-product-card__images-big.js-card-big-slider 
+                        .section-product-card__images-big-item 
+                            //- a(href="assets/images/card-img.jpg" data-fslightbox="fs-img") 
+                            img(src="assets/images/card-img.jpg", alt="").section-product-card__images-big-item-img 
+                        .section-product-card__images-big-item 
+                            //- a(href="assets/images/video-img-main.jpg" data-fslightbox="fs-img") 
+                            img(src="assets/images/video-img-main.jpg", alt="").section-product-card__images-big-item-img 
+                        .section-product-card__images-big-item 
+                            //- a(href="assets/images/main-bg.jpg" data-fslightbox="fs-img") 
+                            img(src="assets/images/main-bg.jpg", alt="").section-product-card__images-big-item-img 
+                    .section-product-card__images-small.js-card-small-slider 
+                        div(style="background-image: url('../assets/images/card-img.jpg')").section-product-card__images-small-item 
+                            //- img(src="assets/images/card-img.jpg", alt="").section-product-card__images-small-item-img 
+                        div(style="background-image: url('../assets/images/video-img-main.jpg')").section-product-card__images-small-item 
+                            //- img(src="assets/images/video-img-main.jpg", alt="").section-product-card__images-small-item-img 
+                        div(style="background-image: url('../assets/images/main-bg.jpg')").section-product-card__images-small-item 
+                            //- img(src="assets/images/main-bg.jpg", alt="").section-product-card__images-small-item-img
+                    .section-product-card__imags-zoom.js-zoom-btn 
+                        +svg('zoom-card', 'zoom', 'zoom') 
+                .section-product-card__icons    
+                    a(href="#").section-product-card__link 
+                        +svg('like-icon-card', 'like-card', 'like-card')
+                        span.section-product-card__link-text Понравилось(<span>0</span>)
+                    a(href="#").section-product-card__link 
+                        +svg('download-icon-card', 'download-card', 'download-card')
+                        span.section-product-card__link-text Цифровая копия
+                    a(href="#").section-product-card__link 
+                        +svg('view-icon-card', 'view-card', 'view-card')
+                        span.section-product-card__link-text Больше не показывать картину
+            .section-product-card__content 
+                .section-product-card__content-title 
+                    h1.section-product-card__content-title-text Распоряжения о структуре очень длинное название картины
+                .section-product-card__content-code 
+                    span.section-product-card__content-code-info    Арт. HWV-165123
+                    a(href="#").section-product-card__content-code-icon.js-like-btn 
+                        +svg('favorite-bg-icon2', 'like', 'favorite')
+                        span.section-product-card__content-code-text В избранное
+                .section-product-card__content-author
+                    a(href="#").section-product-card__content-author-link Диана Миллерелло
+                .section-product-card__content-info
+                    span.section-product-card__content-info-size Размер картины: <span>100 х 120 х 4 см</span>
+                    span.section-product-card__content-info-style Стиль: <a href="#">Пейзаж</a>
+                .section-product-card__content-price 
+                    .section-product-card__content-price-item 
+                        span.section-product-card__content-price-item-text 927 750 <span class="rub">₽</span>
+                        span.section-product-card__content-price-item-old 727 750
+                    a(href="#").section-product-card__content-price-btn <span class="btn-text"><span>Добавить</span> в корзину </span>
+                .section-product-card__icons-mobile    
+                    a(href="#").section-product-card__icons-mobile-link 
+                        +svg('like-icon-card', 'like-card', 'like-card')
+                        span.section-product-card__link-text Понравилось(<span>0</span>)
+                    a(href="#").section-product-card__icons-mobile-link.js-like-btn
+                        +svg('favorite-bg-icon2', 'like', 'favorite')
+                        span.section-product-card__link-text В избранное
+                    a(href="#").section-product-card__icons-mobile-link 
+                        +svg('view-icon-card', 'view-card', 'view-card')
+                        span.section-product-card__link-text Не показывать 
+                    a(href="#").section-product-card__icons-mobile-link
+                        +svg('download-icon-card', 'download-card', 'download-card')
+                        span.section-product-card__link-text Скачать копию
+                .section-product-card__social 
+                        a(href="#").section-product-card__social-link
+                            +svg('vk-icon', 'vk', 'vk')
+                        a(href="#").section-product-card__social-link
+                             +svg('fb-icon', 'fb', 'fb')
+                        a(href="#").section-product-card__social-link
+                            +svg('ok-icon', 'ok', 'ok')
+                        a(href="#").section-product-card__social-link
+                            +svg('mail-card', 'mail-card', 'mail-card')
+                .section-product-card__accordion 
+                    span.section-product-card__accordion-title.js-accordion-card-btn Параметры картины
+                    .section-product-card__accordion-parameters
+                        .section-product-card__accordion-parameters-item
+                            span.section-product-card__accordion-parameters-item-title Год написания
+                            span.section-product-card__accordion-parameters-item-text 2008
+                        .section-product-card__accordion-parameters-item
+                            span.section-product-card__accordion-parameters-item-title Тема
+                            span.section-product-card__accordion-parameters-item-text Океан,Берег,Пляж
+                        .section-product-card__accordion-parameters-item
+                            span.section-product-card__accordion-parameters-item-title Стиль
+                            span.section-product-card__accordion-parameters-item-text Современный пейзаж
+                        .section-product-card__accordion-parameters-item
+                            span.section-product-card__accordion-parameters-item-title Материал
+                            span.section-product-card__accordion-parameters-item-text Уголь,Чернила,Пастель
+                    span.section-product-card__accordion-title.js-accordion-card-btn Описание картины
+                    .section-product-card__accordion-description
+                        p.section-product-card__accordion-description-text Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия. По своей сути рыбатекст является альтернативой традиционному lorem ipsum
+                        
+
+
+                    

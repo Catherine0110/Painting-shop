@@ -1,0 +1,244 @@
+.section-popular-filters {
+    padding-top: 50px;
+    padding-bottom: 35px;
+    font-size: 24px;
+    line-height: 42px;
+    color: #2e3237;
+    font-weight: 300;
+    @media (max-width: $tablet) {
+        padding-top: 35px;
+    }
+    @media (max-width: $mobile) {
+        padding: 30px 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    &__title {
+        margin-bottom: 25px;
+        font-weight: 300;
+        position: relative;
+        &-text {
+            font-weight: 300;
+        }
+        @media (max-width: $mobile) {
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+            margin-left: -10px;
+            margin-right: -10px;
+            text-align: center;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 1px;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -1px;
+                background: #000;
+            }
+        }
+    }
+    &__carousel-wrapper {
+        margin: 0 -6px;
+        // display: flex;
+        // flex-wrap: wrap;
+        @media (max-width: $mobile) {
+            margin: 0 -4px;
+        }
+        @media (max-width: $mobile) {
+            margin: 0 40px;
+        }
+    }
+    &__carousel-item {
+        display: block;
+        width: calc(100% / 5 - 12px);
+        margin: 0 6px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 0px 0px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.2s ease 0s;
+        &:hover {
+            &::after{
+            border: 5px solid #009999;
+            }
+            .section-popular-filters__carousel-item-inner{
+                background: #009999;
+            }
+        }
+        @media (max-width: $tablet) {
+            width: calc(100% / 4 - 8px);
+            margin: 0 4px;            
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+            margin: 0;
+        }
+        &:before {
+            content: '';
+            display: block;
+            // position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0; 
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;   
+            background-image: inherit;
+            padding-top: 63%;  
+                 
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 40px; 
+            border: 5px solid transparent;  
+            transition: 0.2s ease 0s;   
+            @media (max-width: $mobile) {
+                bottom: 27px;
+            }
+        }
+    }
+    &__carousel-item-inner  {
+        position: relative;
+        color: #fff;
+        left: 0;
+        bottom: 8px;
+        display: inline-block;
+        font-size: 20px;
+        line-height: 30px;
+        background: rgba(30, 32, 38, 0.87);
+        padding: 0 15px;
+        transition: 0.3s ease 0s;
+        @media (max-width: $tablet) {
+            bottom: 11px;
+            font-size: 15px;
+            line-height: 27px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 27px;
+            padding: 0 10px;
+            bottom: 1px;
+        }
+    }
+
+    
+    
+    .slick-prev {
+        background: none;
+        border: none;
+        position: absolute;       
+        right: 60px; 
+        @media (max-width: $mobile) {
+            right: calc(50% + 5px) !important;
+        }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-image: url('../assets/images/arrow-icon.png') !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+        }
+        &:hover {
+            &::before {
+            filter: invert(100%); 
+            } 
+        }  
+        @media (max-width: $tablet) {
+            &:hover {
+                &::before {
+                    filter: none;
+                    background-image: url('../assets/images/arrow-icon2.png') !important;
+                }
+            }
+        }
+        @media (max-width: $mobile) {
+            left:  -56px;
+        }              
+        
+    }
+    .slick-next {
+        background:none;
+        border: none;         
+        position: absolute;   
+        right: 0px;   
+        
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-image: url('../assets/images/arrow-icon.png') !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            transform: rotate(180deg); 
+        }
+        &:hover {
+            &::before {
+            filter: invert(100%); 
+            } 
+        }
+        @media (max-width: $tablet) {
+            &:hover {
+                &::before {
+                    filter: none;
+                    background-image: url('../assets/images/arrow-icon2.png') !important;
+                }
+            }
+        }
+        @media (max-width: $mobile) {
+            right: -56px;
+        }
+           
+    }
+    .slick-arrow {
+        width: 56px;
+        height: 56px;
+        font-size: 0;
+        border: 1px solid #ccc;
+        cursor: pointer; 
+        border-radius: 50%;  
+        transition: 0.3s;
+        background: #fff;
+        top: -70px;  
+        transition: 0.3s ease 0s;
+              
+        &:hover {
+            background-color: #4a4f52 ;
+        }    
+        @media (max-width: $tablet) {
+            border: none;
+            background: none !important;
+            &:hover {
+                background-color: none !important;
+            }
+        }
+        @media (max-width: $mobile) {
+            top: 50%;
+            transform: translateY(-50%);
+        } 
+    }
+    
+   
+    
+    
+}

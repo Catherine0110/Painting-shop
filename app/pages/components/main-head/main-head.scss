@@ -1,0 +1,38 @@
+.section-head {
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background: #000;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        margin: auto;       
+    }
+    @media (max-width: $mobile) { 
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 42px;
+        @media (max-width: $tablet) {
+            font-size: 30px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 22px;
+        }
+    }
+}

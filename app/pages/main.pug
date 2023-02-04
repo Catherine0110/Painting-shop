@@ -1,0 +1,54 @@
+include components/mixin-svg/mixin.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet" href="css/libs.min.css")
+        link(rel="stylesheet" href="css/main.css")
+    body 
+
+         .wrapper
+            include components/header/header.pug
+            include components/main/main.pug 
+            .section.section-color
+                -
+                    var head = {
+                        title: "Не знаете с чего начать?"
+                    }; 
+
+                include components/main-head/main-head.pug 
+                include components/tutorial/tutorial.pug
+            .section.works
+                    -
+                        var head = {
+                            title: "Новые работы"
+                        }; 
+
+                    include components/main-head/main-head.pug                               
+                    include components/select/select.pug 
+                    include components/gallery/gallery.pug
+            .section.styles.section-color
+                -
+                        var head = {
+                            title: "Обзор стилей"
+                        }; 
+
+                include components/main-head/main-head.pug
+                include components/main-styles/main-styles.pug  
+            .section.news 
+                -
+                        var head = {
+                            title: "Новости искусства"
+                        }; 
+
+                include components/main-head/main-head.pug
+                include components/news/news.pug       
+            include components/footer/footer.pug
+    
+    script(src="js/libs.min.js")
+    script(src="js/common.js")
+            

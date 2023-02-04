@@ -1,0 +1,304 @@
+.section-styles {
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+    @media (max-width: $mobile) { 
+        padding-bottom: 0;
+        margin-top: 90px;
+        color: #000;
+    }
+    &_inner {
+        position: relative;
+
+    }
+    
+    &__item {
+        width: 50%;
+        @media (min-width: 768px) and (max-width: 1279px) {
+            width: calc(100vw / 3 * 2 - 6px) !important;
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 -20px;
+            @media (max-width: $tablet) {
+                margin: 0 -6px;
+            }
+            @media (max-width: $mobile) {
+                margin: 0 -3px;
+            }
+        }
+    }
+    &__item-content {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: calc(50% - 40px);
+        margin: 20px;
+        background-repeat: no-repeat;
+        background-size: 0px 0px;
+        text-align: center;
+        @media (max-width: $tablet) {
+            width: calc(50% - 12px);
+            margin: 6px;
+        }
+        @media (max-width: $mobile) {
+            text-align: left;
+            width: calc(50% - 6px);
+            margin: 3px;
+        }
+        
+        &.large {  
+            width: calc(100% - 40px);
+            @media (max-width: $tablet) {
+                width: calc(100% - 12px);
+            }
+            @media (max-width: $mobile) {
+                width: 100%;
+            }
+            
+            &::before {
+                padding-top: calc(50% - 20px);
+                @media (max-width: $tablet) {
+                    padding-top: calc(50% - 12px);
+                }
+                @media (max-width: $tablet) {
+                    padding-top: calc(50% - 6px);
+                }
+            }
+            &:first-child{          
+            background-image: url("../assets/images/sytle-nu-main.jpg");
+            }
+            &:last-child{          
+                background-image: url("../assets/images/sytle-nu2-main.jpg");
+            }
+        }
+        
+                   
+        &:nth-child(1),
+        &:nth-child(3) {
+            &.min {
+                &:not(:last-child){          
+                    background-image: url("../assets/images/sytle-popart-main.jpg");
+                }
+                &:last-child{          
+                    background-image: url("../assets/images/sytle-abstract-main.jpg");
+                }
+            }
+        }
+        &:nth-child(2),
+        &:nth-child(4) {
+            &.min {
+                &:not(:last-child){          
+                    background-image: url("../assets/images/sytle-popart2-main.jpg");
+                }
+                &:last-child{          
+                    background-image: url("../assets/images/sytle-abstract2-main.jpg");
+                }
+            }
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: rgba($color: #000000, $alpha: 0.3);
+            transform: 0.3s;
+            @media (max-width: $mobile) {
+                background: none;
+            }
+        }
+        
+        &::before {
+
+            content: '';
+            display: block;
+            background-image: inherit;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            padding-top: 100%;
+            z-index: 1;            
+            transform: scale(1);   
+            transition: transform 0.5s linear 0s;       
+            
+        }
+        &:hover {
+            &::before {
+                transform: scale(1.1);
+                @media (max-width: $mobile) {
+                    transform: scale(1);
+                 }
+            }
+            &::after {
+                background: rgba($color: #000000, $alpha: 0.8);
+                @media (max-width: $mobile) {
+                    background: none;
+                 }
+            }
+        }
+        
+    }
+    &__category,
+    &__title {
+        display: block;
+        position: absolute;        
+        right: 0;
+        left: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        z-index: 5;
+        @media (max-width: $tablet) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 14px;
+            line-height: 18px;
+            position: static;
+            padding: 0;
+            right: auto;
+            left: auto;
+
+        }
+    }
+    &__title {
+        font-size: 22px;
+        top: 50%;
+        padding-top: 20px;
+        line-height: 29px;
+        font-weight: 600;
+        @media (max-width: $tablet) {
+            font-size: 18px;
+            line-height: 23px;  
+            padding-top: 10px;          
+        }
+        @media (max-width: $mobile) {
+            top: auto;
+            position: relative;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            background: #fff;   
+            @media (max-width: $mobile) {
+                background: #000;
+                right: auto;
+            }         
+        }
+    }
+    &__category {
+        bottom: 50%;
+        padding-bottom: 20px;
+        line-height: 25px;
+        @media (max-width: $tablet) {
+            font-size: 16px;
+            line-height: 20px;
+            padding-bottom: 10px;
+        }
+        @media (max-width: $mobile) {
+            bottom: auto;
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        
+    }
+    .slick-slide {
+
+        margin: 0 20px;
+        @media (max-width: $tablet) {
+            margin: 0 6px;
+        }
+    }
+    
+    .slick-prev {
+        background: none;
+        border: none;
+        position: absolute;       
+        right: 60px; 
+        @media (max-width: $mobile) {
+            right: calc(50% + 5px) !important;
+        }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-image: url('../assets/images/arrow-icon.png') !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+        }
+        &:hover {
+            &::before {
+            filter: invert(100%); 
+            } 
+        }                
+        
+    }
+    .slick-next {
+        background:none;
+        border: none;         
+        position: absolute;   
+        right: 0px;   
+        
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-image: url('../assets/images/arrow-icon.png') !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            transform: rotate(180deg); 
+        }
+        &:hover {
+            &::before {
+            filter: invert(100%); 
+            } 
+        }
+           
+    }
+    .slick-arrow {
+        width: 56px;
+        height: 56px;
+        font-size: 0;
+        cursor: pointer; 
+        border-radius: 50%;  
+        transition: 0.3s;
+        background: #fff;
+        top: -110px;        
+        &:hover {
+            background-color: #1e2026 ;
+        }    
+        @media (max-width: $mobile) {
+            top: -74px;
+            right:  calc(50% - 56px);
+        } 
+    }
+    
+}

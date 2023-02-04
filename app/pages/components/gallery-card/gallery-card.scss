@@ -1,0 +1,171 @@
+.gallery-card {
+    width: 100%;
+    border: 1px solid #ededed;
+    color: #2e3237;
+    transition: 0.3s;
+    background: #fff;
+    margin-bottom: 30px;
+    &:hover {
+        box-shadow: 0 0 20px 0 rgba(#000000,0.15);
+    }
+    &__img {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+    }
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+        transition: transform 0.5s linear 0s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__shields {
+        position: absolute;
+        top: -10px;              
+    }
+    &__shield {
+        line-height: 18px;
+        padding-right: 12px;
+        padding-left: 12px;
+        color: #fff;
+        &-new {
+            background: #990000;
+        }
+        &-discount {
+            background:#65b040;
+        }
+    }
+    &__content {
+        position: relative;
+    }
+    &__group {
+        padding: 15px ;
+        @media (max-width: $tablet) {
+            padding: 10px;
+        }
+        &:last-child{
+            @media (max-width: $mobile) {
+                padding: 10px 0;
+            }
+        }
+        &:first-child {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    &__title,
+    &__author {
+        font-size: 15px;
+        line-height: 18px;        
+        margin-bottom: 10px;
+        display: block;
+    }
+    &__title {
+        font-weight: 600;
+        transition: 0.3s;
+        @media (max-width: $tablet) {
+            font-size: 12px;
+        }
+        &:hover {
+            color: #009999;
+        }
+    }
+    &__author {
+        @media (max-width: $tablet) {
+            font-size: 14px;
+        }
+    }
+    &__size {
+        font-size: 14px;
+        @media (max-width: $tablet) {
+            font-size: 12px;
+        }
+    }
+    &__price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $mobile) {
+            display: block;
+        }
+        &-block:first-child {
+            @media (max-width: $mobile) {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+        &-block:last-child{
+            @media (max-width: $mobile) {
+                padding-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        &-text {
+            font-size: 18px;
+            margin-right: 10px;
+            @media (max-width: $tablet) {
+                font-size: 16px;
+            }
+            @media (max-width: $mobile) {
+                display: block;
+                order: 1;
+                margin-right: 0;
+            }
+        }
+        &-old {
+            font-size: 14px;
+            color: #666;
+            text-decoration: line-through;
+            @media (max-width: $tablet) {
+                font-size: 12px;
+            }
+        }
+        &-block-favorite,
+        &-block-cart {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;            
+            fill: transparent;
+            stroke: #000;
+            stroke-width: 2px;
+            @media (max-width: $tablet) {
+                margin-left: 15px;
+            }
+            @media (max-width: $mobile) {
+                margin-left: 0;
+            }
+            &:hover svg{
+                stroke: #009999;
+            }
+            &:active svg {
+                fill: #009999;
+                stroke: #009999;
+            }
+            &.is-active svg{
+                stroke: #009999;
+                fill: #009999;
+            }
+        }
+        .favorite {
+            max-width: 22px;
+            max-height: 20px;
+            
+        }
+        .cart {
+            max-width: 18px;
+            max-height: 22px;
+           
+        }
+    }
+}

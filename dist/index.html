@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__group">
+            <div class="header__burger js-burger">
+              <div class="header__burger-line"></div>
+              <div class="header__burger-line"></div>
+              <div class="header__burger-line"></div>
+            </div>
+            <div class="header__mobile-menu js-mobile-menu">
+              <div class="header__mobile-menu-drop">
+                <div class="container">
+                  <div class="header__mobile-menu-drop-inner">
+                    <div class="header__mobile-menu-drop-inner-group"><a class="header__mobile-menu-drop-link"
+                        href="#">Каталог </a><a class="header__mobile-menu-drop-link" href="#">Художникам </a><a
+                        class="header__mobile-menu-drop-link" href="#">Блог </a><a class="header__mobile-menu-drop-link"
+                        href="#">О проекте</a><a class="header__mobile-menu-drop-link" href="#">Доставка</a></div>
+                    <div class="header__mobile-menu-drop-inner-group"><a class="header__mobile-menu-drop-link"
+                        href="#">Политика конфиденциальности</a><a class="header__mobile-menu-drop-link"
+                        href="#">Английская версия</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__mobile-menu-drop-copyright"> <span class="menu-copyright">© Company, 2020 copy</span>
+              </div>
+            </div><a class="header__logo" href="#"> <span>Company1</span><span>Company2 </span></a>
+            <div class="header__mobile-logo"> <a class="logo-mobile" href="#"> <span>C1</span><span>C2 </span></a></div>
+          </div>
+          <div class="header__menu">
+            <div class="header__menu-item"> <a class="header__menu-link" href="#">Каталог </a></div>
+            <div class="header__menu-item"> <a class="header__menu-link" href="#">Художникам </a></div>
+            <div class="header__menu-item"> <a class="header__menu-link" href="#">Блог</a></div>
+            <div class="header__menu-item"> <a class="header__menu-link link-drop" href="#">Еще</a>
+              <div class="header__menu-drop">
+                <div class="container">
+                  <div class="header__menu-drop-inner"> <a class="header__menu-drop-link" href="#">О проекте</a><a
+                      class="header__menu-drop-link" href="#">Доставка</a><a class="header__menu-drop-link"
+                      href="#">Политика конфиденциальности</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__tools">
+            <div class="header__tools-item tools-user js-tools-user"><a class="header__tools-link" href="#">
+                <div class="tools-user-icon">
+                  <svg class="icon user">
+                    <use xlink:href="assets/images/user-icon.svg#user"></use>
+                  </svg>
+                </div><span>Name</span>
+              </a>
+              <div class="tools-user__drop">
+                <div class="tools-user__drop-group"><a class="tools-user__drop-group-link" href="#">Мой профиль</a><a
+                    class="tools-user__drop-group-link" href="#">Мои заказы</a><a class="tools-user__drop-group-link"
+                    href="#">Сообщения</a></div>
+                <div class="tools-user__drop-group"><a class="tools-user__drop-group-link" href="#">Настройки
+                    профиля</a><a class="tools-user__drop-group-link" href="#">Мои работы</a></div>
+                <div class="tools-user__drop-group"><a class="tools-user__drop-group-link" href="#">Выйти</a></div>
+              </div>
+            </div>
+            <div class="header__tools-item tools-favorite"><a class="header__tools-link" href="#">
+                <svg class="icon favorite">
+                  <use xlink:href="assets/images/favorite-icon.svg#like"></use>
+                </svg><span class="header__tools-item-counter">0</span></a></div>
+            <div class="header__tools-item tools-cart"><a class="header__tools-link" href="#">
+                <svg class="icon cart">
+                  <use xlink:href="assets/images/cart-icon.svg#cart"></use>
+                </svg><span class="header__tools-item-counter">0</span></a></div>
+            <div class="header__tools-item tools-search js-header-search"><a class="header__tools-link js-search-link"
+                href="#">
+                <svg class="icon search">
+                  <use xlink:href="assets/images/search-icon.svg#search"></use>
+                </svg></a>
+              <form class="tools-search__form js-search-form">
+                <div class="container">
+                  <div class="tools-search__form-field">
+                    <input class="tools-search__form-input" type="text" name="search" id="search"
+                      placeholder="Поиск...">
+                    <button class="tools-search__form-reset" type="reset">
+                      <svg class="icon close">
+                        <use xlink:href="assets/images/icon-close.svg#X"></use>
+                      </svg>
+                    </button>
+                    <button class="tools-search__form-submit" type="submit">
+                      <svg class="icon search">
+                        <use xlink:href="assets/images/search-icon.svg#search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="header__tools-item tools-lang"><a class="header__tools-link" href="#">RU </a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-carousel js-carousel-main">
+      <div class="main">
+        <div class="container">
+          <div class="main__inner">
+            <div class="main__content"> <span class="main__text-optional">Новое на этой неделе</span>
+              <div class="main__title-wrapper">
+                <h1 class="main__title">Лучшие фигуративные произведения</h1>
+              </div>
+              <p class="main__text">Новые оригинальные работы, выбранные нашим эспертом</p>
+            </div>
+            <div class="main__button"> <a class="main__btn" href="#">Открыть</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="container">
+          <div class="main__inner">
+            <div class="main__content"> <span class="main__text-optional">Новое на этой неделе</span>
+              <div class="main__title-wrapper">
+                <h1 class="main__title">Лучшие фигуративные произведения</h1>
+              </div>
+              <p class="main__text">Новые оригинальные работы, выбранные нашим эспертом</p>
+            </div>
+            <div class="main__button"> <a class="main__btn" href="#">Открыть</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="container">
+          <div class="main__inner">
+            <div class="main__content"> <span class="main__text-optional">Новое на этой неделе</span>
+              <div class="main__title-wrapper">
+                <h1 class="main__title">Лучшие фигуративные произведения</h1>
+              </div>
+              <p class="main__text">Новые оригинальные работы, выбранные нашим эспертом</p>
+            </div>
+            <div class="main__button"> <a class="main__btn" href="#">Открыть</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-color">
+      <div class="section-head">
+        <div class="container">
+          <div class="section-head__inner">
+            <h2 class="section-head__title">Не знаете с чего начать?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="section-tutorial">
+        <div class="container">
+          <div class="section-tutorial__inner">
+            <div class="section-tutorial__video js-tutorial-video" data-id="AgpWX18dby4">
+              <div class="section-tutorial__text"> <span class="section-tutorial__text-content">Видеобзор нашего ресурса
+                  возможности для пользователя</span></div>
+            </div>
+            <div class="section-tutorial__article"><a href="#"> <img class="section-tutorial__article-img"
+                  src="assets/images/note-img-main.jpg" alt="note-img"></a><a class="section-tutorial__article-heading"
+                href="#"> <span class="section-tutorial__article-heading-text">Выбор экспертов </span></a><a
+                class="section-tutorial__article-title" href="#"><span
+                  class="section-tutorial__article-title-text">Обзор нашего экспетра ФИО </span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section works">
+      <div class="section-head">
+        <div class="container">
+          <div class="section-head__inner">
+            <h2 class="section-head__title">Новые работы</h2>
+          </div>
+        </div>
+      </div>
+      <div class="section-select">
+        <div class="container">
+          <div class="section-select__inner"> <span class="section-select__text">Сортировать по</span>
+            <select class="section-select__input js-select">
+              <option value="Дате добавления">Дате добавления</option>
+              <option value="Дате добавления">Дате добавления</option>
+              <option value="Дате добавления">Дате добавления</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="gallery js-gallery">
+        <div class="container">
+          <div class="gallery__inner js-gallery-masonry js-gallery-inner">
+            <div class="gallery__fix js-gallery-stamp">
+              <div class="gallery__fix-inner"> <span class="gallery__fix-text">Умный выбор по параметрам с
+                  примерами</span><a class="gallery__fix-link" href="#">Подобрать</a></div>
+            </div>
+            <div class="gallery__gutter js-gallery-gutter"></div>
+            <div class="gallery__item">
+              <div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image"
+                    src="assets/images/gallery-img-1.jpg" alt=""></a>
+                <div class="gallery-card__content">
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__shields"><span class="gallery-card__shield gallery-card__shield"></span>
+                    </div><a class="gallery-card__title" href="#">Распоряжения о структуре тут длинное название картины
+                    </a><a class="gallery-card__author" href="#">Екатерина Александровна Преображенская</a><span
+                      class="gallery-card__size">Картина, 80x60 см.</span>
+                  </div>
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__price">
+                      <div class="gallery-card__price-block"><span class="gallery-card__price-text">927 750 <span
+                            class="rub">₽</span></span><span class="gallery-card__price-old">727 750</span>
+                      </div>
+                      <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon"
+                          href="#">
+                          <svg class="icon favorite">
+                            <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+                          </svg></a><a class="gallery-card__price-block-cart js-icon" href="#">
+                          <svg class="icon cart">
+                            <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image"
+                    src="assets/images/gallery-img-2.jpg" alt=""></a>
+                <div class="gallery-card__content">
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__shields"><span
+                        class="gallery-card__shield gallery-card__shield-new">Новинка</span>
+                    </div><a class="gallery-card__title" href="#">Абстракция, Опус J202</a><a
+                      class="gallery-card__author" href="#">Соколов Виталий</a><span class="gallery-card__size">Картина,
+                      80x60 см.</span>
+                  </div>
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__price">
+                      <div class="gallery-card__price-block"><span class="gallery-card__price-text">927 750 <span
+                            class="rub">₽</span></span><span class="gallery-card__price-old">727 750</span>
+                      </div>
+                      <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon"
+                          href="#">
+                          <svg class="icon favorite">
+                            <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+                          </svg></a><a class="gallery-card__price-block-cart js-icon" href="#">
+                          <svg class="icon cart">
+                            <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__item gallery__item--fix-tablet"></div>
+            <div class="gallery__item">
+              <div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image"
+                    src="assets/images/gallery-img-3.jpg" alt=""></a>
+                <div class="gallery-card__content">
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__shields"><span
+                        class="gallery-card__shield gallery-card__shield-new">Новинка</span>
+                    </div><a class="gallery-card__title" href="#">Распоряжения о структуре тут длинное название картины
+                    </a><a class="gallery-card__author" href="#">Екатерина Александровна Преображенская</a><span
+                      class="gallery-card__size">Картина, 80x60 см.</span>
+                  </div>
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__price">
+                      <div class="gallery-card__price-block"><span class="gallery-card__price-text">927 750 <span
+                            class="rub">₽</span></span><span class="gallery-card__price-old">727 750</span>
+                      </div>
+                      <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon"
+                          href="#">
+                          <svg class="icon favorite">
+                            <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+                          </svg></a><a class="gallery-card__price-block-cart js-icon" href="#">
+                          <svg class="icon cart">
+                            <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image"
+                    src="assets/images/gallery-img-4.jpg" alt=""></a>
+                <div class="gallery-card__content">
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__shields"><span class="gallery-card__shield gallery-card__shield"></span>
+                    </div><a class="gallery-card__title" href="#">Распоряжения о структур</a><a
+                      class="gallery-card__author" href="#">Говард Херш</a><span class="gallery-card__size">Картина,
+                      80x60 см.</span>
+                  </div>
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__price">
+                      <div class="gallery-card__price-block"><span class="gallery-card__price-text">27 750 <span
+                            class="rub">₽</span></span>
+                      </div>
+                      <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon"
+                          href="#">
+                          <svg class="icon favorite">
+                            <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+                          </svg></a><a class="gallery-card__price-block-cart js-icon" href="#">
+                          <svg class="icon cart">
+                            <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image"
+                    src="assets/images/gallery-img-5.jpg" alt=""></a>
+                <div class="gallery-card__content">
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__shields"><span class="gallery-card__shield gallery-card__shield"></span>
+                    </div><a class="gallery-card__title" href="#">Абстракция, Опус J202</a><a
+                      class="gallery-card__author" href="#">Соколов Виталий</a><span class="gallery-card__size">Картина,
+                      80x60 см.</span>
+                  </div>
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__price">
+                      <div class="gallery-card__price-block"><span class="gallery-card__price-text">27 750 <span
+                            class="rub">₽</span></span>
+                      </div>
+                      <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon"
+                          href="#">
+                          <svg class="icon favorite">
+                            <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+                          </svg></a><a class="gallery-card__price-block-cart js-icon" href="#">
+                          <svg class="icon cart">
+                            <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image"
+                    src="assets/images/gallery-img-6.jpg" alt=""></a>
+                <div class="gallery-card__content">
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__shields"><span
+                        class="gallery-card__shield gallery-card__shield-discount">Скидка 20%</span>
+                    </div><a class="gallery-card__title" href="#">Распоряжения о структуре тут длинное название картины
+                    </a><a class="gallery-card__author" href="#">Екатерина Александровна Преображенская</a><span
+                      class="gallery-card__size">Картина, 80x60 см.</span>
+                  </div>
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__price">
+                      <div class="gallery-card__price-block"><span class="gallery-card__price-text">927 750 <span
+                            class="rub">₽</span></span><span class="gallery-card__price-old">727 750</span>
+                      </div>
+                      <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon"
+                          href="#">
+                          <svg class="icon favorite">
+                            <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+                          </svg></a><a class="gallery-card__price-block-cart js-icon" href="#">
+                          <svg class="icon cart">
+                            <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image"
+                    src="assets/images/gallery-img-7.jpg" alt=""></a>
+                <div class="gallery-card__content">
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__shields"><span
+                        class="gallery-card__shield gallery-card__shield-discount">Скидка 20%</span>
+                    </div><a class="gallery-card__title" href="#">Растущее действие</a><a class="gallery-card__author"
+                      href="#">Рамина Роуз </a><span class="gallery-card__size">Картина, 80x60 см.</span>
+                  </div>
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__price">
+                      <div class="gallery-card__price-block"><span class="gallery-card__price-text">27 750 <span
+                            class="rub">₽</span></span>
+                      </div>
+                      <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon"
+                          href="#">
+                          <svg class="icon favorite">
+                            <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+                          </svg></a><a class="gallery-card__price-block-cart js-icon" href="#">
+                          <svg class="icon cart">
+                            <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image"
+                    src="assets/images/gallery-img-8.jpg" alt=""></a>
+                <div class="gallery-card__content">
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__shields"><span class="gallery-card__shield gallery-card__shield"></span>
+                    </div><a class="gallery-card__title" href="#">Абстракция, Опус J202</a><a
+                      class="gallery-card__author" href="#">Соколов Виталий</a><span class="gallery-card__size">Картина,
+                      80x60 см.</span>
+                  </div>
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__price">
+                      <div class="gallery-card__price-block"><span class="gallery-card__price-text">27 750 <span
+                            class="rub">₽</span></span>
+                      </div>
+                      <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon"
+                          href="#">
+                          <svg class="icon favorite">
+                            <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+                          </svg></a><a class="gallery-card__price-block-cart js-icon" href="#">
+                          <svg class="icon cart">
+                            <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image"
+                    src="assets/images/gallery-img-9.jpg" alt=""></a>
+                <div class="gallery-card__content">
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__shields"><span class="gallery-card__shield gallery-card__shield"></span>
+                    </div><a class="gallery-card__title" href="#">Абстракция, Опус J202</a><a
+                      class="gallery-card__author" href="#">Соколов Виталий</a><span class="gallery-card__size">Картина,
+                      80x60 см.</span>
+                  </div>
+                  <div class="gallery-card__group">
+                    <div class="gallery-card__price">
+                      <div class="gallery-card__price-block"><span class="gallery-card__price-text">27 750 <span
+                            class="rub">₽</span></span>
+                      </div>
+                      <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon"
+                          href="#">
+                          <svg class="icon favorite">
+                            <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+                          </svg></a><a class="gallery-card__price-block-cart js-icon" href="#">
+                          <svg class="icon cart">
+                            <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__btn"><a class="gallery__button js-gallery-btn" href="#" data-btn="upload">Смотреть
+              все</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section styles section-color">
+      <div class="section-head">
+        <div class="container">
+          <div class="section-head__inner">
+            <h2 class="section-head__title">Обзор стилей</h2>
+          </div>
+        </div>
+      </div>
+      <div class="section-styles">
+        <div class="container">
+          <div class="section-styles__inner">
+            <div class="section-styles__carousel js-styles-slider">
+              <div class="section-styles__item">
+                <div class="section-styles__item-inner"> <a class="section-styles__item-content large" href="#"><span
+                      class="section-styles__category">Современное НЮ </span><span class="section-styles__title">Новое
+                      изобразительное искусство</span></a><a class="section-styles__item-content min" href="#"><span
+                      class="section-styles__category">Вдохновение Уорхолом</span><span class="section-styles__title">
+                      Новый Поп Арт </span></a><a class="section-styles__item-content min" href="#"> <span
+                      class="section-styles__category">Вдохновение Гансом Хофманном</span><span
+                      class="section-styles__title">Новый абстрактный экспрессионизм</span></a></div>
+              </div>
+              <div class="section-styles__item">
+                <div class="section-styles__item-inner"> <a class="section-styles__item-content min" href="#"><span
+                      class="section-styles__category">Вдохновение Уорхолом</span><span class="section-styles__title">
+                      Новый Поп Арт</span></a><a class="section-styles__item-content min" href="#"><span
+                      class="section-styles__category">Вдохновение Гансом Хофманном</span><span
+                      class="section-styles__title">Новый абстрактный экспрессионизм</span></a><a
+                    class="section-styles__item-content large" href="#"><span
+                      class="section-styles__category">Современное НЮ</span><span class="section-styles__title">Новое
+                      изобразительное искусство</span></a></div>
+              </div>
+              <div class="section-styles__item">
+                <div class="section-styles__item-inner"><a class="section-styles__item-content large" href="#"><span
+                      class="section-styles__category">Современное НЮ </span><span class="section-styles__title">Новое
+                      изобразительное искусство</span></a><a class="section-styles__item-content min" href="#"><span
+                      class="section-styles__category">Вдохновение Уорхолом </span><span
+                      class="section-styles__title">Новый Поп Арт</span></a><a class="section-styles__item-content min"
+                    href="#"><span class="section-styles__category">Вдохновение Гансом Хофманном</span><span
+                      class="section-styles__title">Новый абстрактный экспрессионизм</span></a></div>
+              </div>
+              <div class="section-styles__item">
+                <div class="section-styles__item-inner"> <a class="section-styles__item-content min" href="#"><span
+                      class="section-styles__category">Вдохновение Уорхолом </span><span
+                      class="section-styles__title">Новый Поп Арт</span></a><a class="section-styles__item-content min"
+                    href="#"><span class="section-styles__category">Вдохновение Гансом Хофманном</span><span
+                      class="section-styles__title">Новый абстрактный экспрессионизм</span></a><a
+                    class="section-styles__item-content large" href="#"><span class="section-styles__category">
+                      Современное НЮ</span><span class="section-styles__title">Новое изобразительное
+                      искусство</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section news">
+      <div class="section-head">
+        <div class="container">
+          <div class="section-head__inner">
+            <h2 class="section-head__title">Новости искусства</h2>
+          </div>
+        </div>
+      </div>
+      <div class="section-news">
+        <div class="container">
+          <div class="section-news__carousel js-news-slider">
+            <div class="section-news__item">
+              <div class="section-news__item-inner"> <a class="section-news__item-img-link" href=""> <img
+                    class="section-news__item-img" src="assets/images/news-imgmobile-example-main.jpg" alt=""></a>
+                <div class="section-news__content"> <a class="section-news__theme" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a><span
+                    class="section-news__date">21.12.2018 </span><a class="section-news__title" href="#">Обзор нашего
+                    экспетра ФИО</a><a class="section-news__text" href="#">Теперь чтобы
+                    увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</a><a
+                    class="section-news__btn" href="#">Смотреть и читать
+                    <svg class="icon arrow">
+                      <use xlink:href="assets/images/arrow-smart.svg#smart"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="section-news__item">
+              <div class="section-news__item-inner"><a class="section-news__item-img-link" href=""> <img
+                    class="section-news__item-img" src="assets/images/news-img1-main.jpg" alt=""></a>
+                <div class="section-news__content"> <a class="section-news__theme" href="#">Коллекционирование</a><span
+                    class="section-news__date">21.12.2018 </span><a class="section-news__title" href="#">Обзор нашего
+                    экспетра ФИО</a><a class="section-news__text" href="#">Теперь чтобы
+                    увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</a><a
+                    class="section-news__btn" href="#">Смотреть и читать
+                    <svg class="icon arrow">
+                      <use xlink:href="assets/images/arrow-smart.svg#smart"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="section-news__item">
+              <div class="section-news__item-inner"> <a class="section-news__item-img-link" href=""><img
+                    class="section-news__item-img" src="assets/images/news-imgmobile-example-main.jpg" alt=""></a>
+                <div class="section-news__content"> <a class="section-news__theme" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a><span
+                    class="section-news__date">21.12.2018 </span><a class="section-news__title" href="#">Обзор нашего
+                    экспетра ФИО</a><a class="section-news__text" href="#">Теперь чтобы
+                    увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</a><a
+                    class="section-news__btn" href="#">Смотреть и читать
+                    <svg class="icon arrow">
+                      <use xlink:href="assets/images/arrow-smart.svg#smart"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="section-news__item">
+              <div class="section-news__item-inner"><a class="section-news__item-img-link" href=""> <img
+                    class="section-news__item-img" src="assets/images/news-img1-main.jpg" alt=""></a>
+                <div class="section-news__content"> <a class="section-news__theme" href="#">Коллекционирование</a><span
+                    class="section-news__date">21.12.2018 </span><a class="section-news__title" href="#">Обзор нашего
+                    экспетра ФИО</a><a class="section-news__text" href="#">Теперь чтобы
+                    увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</a><a
+                    class="section-news__btn" href="#">Смотреть и читать
+                    <svg class="icon arrow">
+                      <use xlink:href="assets/images/arrow-smart.svg#smart"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__top">
+            <div class="footer__top-inner">
+              <div class="footer__top-item"><span class="footer__top-title">Об Company</span><a class="footer__top-text"
+                  href="#">О проекте</a><a class="footer__top-text" href="#">Блог</a><a class="footer__top-text"
+                  href="#">Авторы</a></div>
+              <div class="footer__top-item"><span class="footer__top-title">Покупателям</span><a
+                  class="footer__top-text" href="#">Доставка</a><a class="footer__top-text" href="#">Оплата</a><a
+                  class="footer__top-text" href="#">Возврат</a></div>
+              <div class="footer__top-item"><span class="footer__top-title">Каталог</span><a class="footer__top-text"
+                  href="#">Картины</a><a class="footer__top-text" href="#">Коллажи</a><a class="footer__top-text"
+                  href="#">Иллюстрации</a></div>
+              <div class="footer__top-item-mobile-social"> <a class="footer__top-item-mobile-social-link" href="#"><img
+                    class="footer__top-item-mobile-social-img" src="assets/images/vk-icon-footer.png" alt=""></a><a
+                  class="footer__top-item-mobile-social-link" href="#"><img class="footer__top-item-mobile-social-img"
+                    src="assets/images/fb-icon-footer.png" alt=""></a><a class="footer__top-item-mobile-social-link"
+                  href="#"><img class="footer__top-item-mobile-social-img" src="assets/images/ok-icon-footer.png"
+                    alt=""></a><a class="footer__top-item-mobile-social-link" href="#"><img
+                    class="footer__top-item-mobile-social-img" src="assets/images/ig-icon-footer.svg" alt=""></a></div>
+              <div class="footer__top-item"><span class="footer__top-title">Контакты</span><a class="footer__top-tel"
+                  href="tel:899912312344">+ 7 (999) 123-123-44</a><a class="footer__top-mail"
+                  href="mailto:info@domainname.ru">info@domainname.ru</a><span class="footer__top-adress">г.
+                  Город,Улица., 12</span></div>
+              <div class="footer__top-item">
+                <div class="footer__social"> <span class="footer__top-title">Мы в социальных сетях: </span>
+                  <div class="footer__social-inner"><a class="footer__top-item-mobile-social-link" href="#"><img
+                        class="footer__top-item-mobile-social-img" src="assets/images/vk-icon-footer.png" alt=""></a><a
+                      class="footer__top-item-mobile-social-link" href="#"><img
+                        class="footer__top-item-mobile-social-img" src="assets/images/fb-icon-footer.png" alt=""></a><a
+                      class="footer__top-item-mobile-social-link" href="#"><img
+                        class="footer__top-item-mobile-social-img" src="assets/images/ok-icon-footer.png" alt=""></a><a
+                      class="footer__top-item-mobile-social-link" href="#"><img
+                        class="footer__top-item-mobile-social-img" src="assets/images/ig-icon-footer.svg" alt=""></a>
+                  </div>
+                </div>
+                <div class="footer__pay"><span class="footer__top-title">Платёжные системы</span>
+                  <div class="footer__pay-inner"><img class="footer__pay-img" src="assets/images/visa-pay-footer.png"
+                      alt=""><img class="footer__pay-img" src="assets/images/mastercard-pay-footer.png" alt=""><img
+                      class="footer__pay-img" src="assets/images/qiwi-pay-footer.png" alt=""><img
+                      class="footer__pay-img" src="assets/images/webmoney-pay-footer.png" alt=""><img
+                      class="footer__pay-img" src="assets/images/yandexmoney-pay-footer.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-inner">
+            <div class="footer__bottom-group"><a class="footer__bottom-group-link" href="#">Политика
+                конфендициальности</a><a class="footer__bottom-group-link" href="#">Условия и положения </a></div><span
+              class="footer__bottom-copyright">© Company, 2018</span><a class="footer__bottom-logo" href="#"><img
+                src="assets/images/footer-logo.png" alt=""><a class="footer__bottom-logo-text" href="">Cайт создан
+                <span>Company</span> </a></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+
+</html>

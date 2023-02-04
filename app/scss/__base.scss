@@ -1,0 +1,255 @@
+
+@import '__variables';
+/**
+ * Global
+ */
+ 
+ *,
+ *::after,
+ *::before {
+     outline: none !important;
+     box-sizing: border-box;
+     min-width: 0;
+     min-height: 0;
+     touch-action: manipulation;
+ }
+ input, select, textarea, button {
+     -webkit-appearance: none;
+     font-family: 'Proxima Nova', sans-serif;
+ }
+ html {
+     -webkit-text-size-adjust: 100%;
+ }
+ a {
+     color: inherit;
+     text-decoration: none;
+ }
+ 
+ body {
+     font-family: 'Proxima Nova', sans-serif;
+     font-weight: normal;
+     font-size: 16px;
+     background: $color-bg;
+ }
+ .wrapper {
+     overflow: hidden;
+     &-invert {
+         background: #fff;
+         padding-top: 80px;
+         @media (max-width: $mobile) { 
+             padding-top: 55px;
+         }
+     }
+ }
+ 
+ .container {
+     width: 1240px;
+     margin: 0 auto;
+     
+     @media (max-width: $tablet) { 
+         width: auto;
+         margin: 0 20px;
+     }
+     @media (max-width: $mobile) { 
+         width: auto;
+         margin: 0 10px;
+     }
+ }
+ 
+ 
+ button {
+     box-shadow: none;
+     border: none;     
+ }
+
+ .section {
+     position: relative;
+     padding-top: 55px;
+     padding-bottom: 65px;
+     @media (max-width: $tablet) { 
+         padding-top: 50px;
+         padding-bottom: 55px;
+     }
+     @media (max-width: $mobile) { 
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+ }
+ .section-color {
+     background: #f7f8f8;
+ }
+ .works {
+     .section-select {
+        @media (max-width: $tablet) {
+            display: none;
+        }
+     }
+ }
+ .catalog-works {
+    background: #f3f4f5;
+    .section-select {
+        padding-top: 20px;
+       @media (max-width: $mobile) {
+           padding-top: 10px;
+       }
+    }
+    .gallery{
+        margin-top: 25px; 
+        @media (max-width: $mobile) {
+            margin-top: 30px;
+        }       
+    }
+}
+.product-catalog-gallery {
+    .gallery-card  {
+        margin-bottom: 0;
+    }
+    .slick-list.draggable {
+        margin: 0 -20px;
+        @media (max-width: $tablet) {
+            margin: 0 ;
+        }
+        @media (max-width: $mobile) {
+            margin: 0 - 4px ;
+        }
+    }
+    .slick-list {
+        @media (max-width: $tablet) {
+        overflow: visible;
+        }
+        @media (max-width: $mobile) {
+            overflow: hidden;
+        }
+    }
+    .slick-track {
+        @media (max-width: $tablet) {
+            left: 55px;
+        
+        }
+        @media (max-width: $mobile) {
+            left: 0;
+        }
+    }
+    .slick-slide {
+        margin: 0 20px;
+        width: 280px !important;
+        @media (max-width: $tablet) {
+            width: calc(100vw / 2 - 100px) !important;
+            // margin: 0 15px;
+        }
+        
+        @media (max-width: $mobile) {
+            width: calc(50vw - 22px) !important;
+            margin: 0 4px;
+        }
+        
+    }
+    .slick-prev {
+        background: none;
+        border: none;
+        position: absolute;       
+        right: 60px; 
+        @media (max-width: $mobile) {
+            left: 0;
+            right: auto ;
+        }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-image: url('../assets/images/arrow-icon.png') !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+        }
+        &:hover {
+            &::before {
+            filter: invert(100%); 
+                @media (max-width: $mobile) {
+                    filter: none;
+                    background-image: url('../assets/images/arrow-icon2.png') !important;                    
+                }
+            } 
+        }                
+        
+    }
+    .slick-next {
+        background:none;
+        border: none;         
+        position: absolute;   
+        right: 0px;   
+        
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-image: url('../assets/images/arrow-icon.png') !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            transform: rotate(180deg); 
+        }
+        &:hover {
+            &::before {
+            filter: invert(100%); 
+                @media (max-width: $mobile) {
+                    filter: none;
+                    background-image: url('../assets/images/arrow-icon2.png') !important;                    
+                }
+            } 
+        }
+           
+    }
+    .slick-arrow {
+        width: 56px;
+        height: 56px;
+        font-size: 0;
+        cursor: pointer; 
+        border-radius: 50%;  
+        transition: 0.3s;
+        background: #fff;
+        top: -105px;        
+        &:hover {
+            background-color: #1e2026 ;
+            @media (max-width: $mobile) {
+               background: none;                  
+            }
+        }   
+        @media (max-width: $tablet) {
+            top: -105px;
+        }  
+        @media (max-width: $mobile) {
+            top: -72px;
+            right:  0;
+            background: none;
+            width: 10px;
+            height: 18px;
+        } 
+    }
+}
+.breadcrumbs-catalog {
+    @media (min-width: $mobile) {
+        display: none;
+    }     
+}
+
+
+ .rub {
+    font-family: 'PT Rouble Sans', sans-serif;
+    font-size: 16px;
+    @media (max-width: $tablet) {
+        font-size: 13px;
+    }
+ }
+
+ //popupZoom
+
+ 
+///////////////////*********************************////////////////////////////
+ 
