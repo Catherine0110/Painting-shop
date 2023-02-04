@@ -1,8 +1,0 @@
-# Файлы редактора
-.idea
-.vscode
-
-# Вспомогательные файлы
-node_modules
-
-package-lock.json

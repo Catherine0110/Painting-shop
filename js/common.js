@@ -1,3 +1,767 @@
+$('.js-gallery-slider').slick({        
+    //   dots: true,
+      arrows:  true,
+      infinite: false, 
+      variableWidth: false,       
+      slidesToShow: 4,
+      slidesToScroll: 1,      
+    //   adaptiveHeight: true,
+      responsive: [
+        
+        {
+          breakpoint: 1280,
+          settings: {
+            // infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            variableWidth: true,
+            // centerMode: true, 
+            // dots: true,
+            arrows:  true
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            variableWidth: false,             
+    
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: false,
+            // dots: true,
+            arrows:  true
+          }
+        }
+        
+      ]
+    });
+
+
+
+
+
+
+const searchBtn = document.querySelector('.js-header-search'),
+      burger = document.querySelector('.js-burger'),
+      mobileMenu = document.querySelector('.js-mobile-menu');
+
+ 
+
+searchBtn.addEventListener('click', (e) => {        
+    if(!e.target.closest('.js-search-form')) {
+        searchBtn.classList.toggle('is-active'); 
+        setTimeout( () => {
+            document.getElementById('search').focus();
+        }, 200)
+    }
+});
+document.addEventListener('click', (e) => {
+    if(!e.target.closest('.js-header-search')) {
+        searchBtn.classList.remove('is-active');
+    }
+});
+
+burger.addEventListener('click', (e) => {
+    burger.classList.toggle('is-active');
+    mobileMenu.classList.toggle('is-active');
+});
+$('.js-carousel-main').slick({
+    arrows:  false,
+    dots: true,
+    fade: true,
+    adaptiveHeight: true
+    // autoplay: true
+});
+const body = document.querySelector('body');
+const modalVideo = document.createElement('div');
+modalVideo.classList.add('popup-video');
+modalVideo.innerHTML = `
+        <div class="popup-video__wrapper">
+        <div class="popup-video__inner js-video" data-id="AgpWX18dby4"></div>
+        </div>`;
+body.append(modalVideo);
+
+function createIframe(clickElement, element) {
+    clickElement.addEventListener('click', (e) => {
+        element.parentElement.parentElement.classList.add('is-active'); 
+        body.style.overflow = 'hidden';
+        const iframe = document.createElement('iframe');
+        let iframeUrl = `https://www.youtube.com/embed/${element.dataset.id}?autoplay=1&autohide=1`;        
+        iframe.setAttribute('src', iframeUrl);
+        iframe.setAttribute('frameborder', '0');                
+        iframe.setAttribute('allow', 'autoplay');                
+        iframe.setAttribute('allowfullscreen', 'allowfullscreen');                
+
+        element.appendChild(iframe);
+        element.parentElement.parentElement.addEventListener('click', function() {
+            iframe.remove();
+            this.classList.remove('is-active');
+            body.style.overflow = '';
+        });
+        
+    });  
+    
+}
+
+if(document.querySelector('.js-tutorial-video')) {
+createIframe(document.querySelector('.js-tutorial-video'), document.querySelector('.js-video'));
+}
+if($('.js-select')) {
+$('.js-select').select2();
+}
+// function masonryGutter(size){
+//     $('.js-gallery-masonry').masonry({
+//         // options
+//         itemSelector: '.gallery__item',
+//         columnWidth: '.gallery__item',
+//         stamp: '.gallery__fix',  
+        
+//          gutter: size,
+      
+//          horizontalOrder: true
+//       });
+// }
+
+// if(document.querySelector('.js-gallery-masonry') && !document.querySelector('.gallery-no-masonry .js-gallery-masonry')) {
+//     if($(window).width() >= 1280) { 
+//         masonryGutter(39);
+//     } else if($(window).width() <= 1279 && $(window).width() >= 767) {
+//         masonryGutter(15);
+//     } else {
+//         masonryGutter(7);
+//     }
+// }
+let cards = [
+    {
+        image: "gallery-img-1.jpg",
+        title: "Распоряжения о структуре тут длинное название картины ",
+        author: "Екатерина Александровна Преображенская",
+        size: "Картина,  80x60 см.",
+        price: "927 750",
+        priceold: "727 750",
+    },
+    {
+        image: "gallery-img-2.jpg",
+        title: "Абстракция, Опус J202",
+        author: "Соколов Виталий",
+        size: "Картина,  80x60 см.",
+        price: "927 750",
+        priceold: "727 750",
+        shield: "Новинка",
+        shieldNew: true
+    },
+    {
+        image: "gallery-img-3.jpg",
+        title: "Распоряжения о структуре тут длинное название картины ",
+        author: "Екатерина Александровна Преображенская",
+        size: "Картина,  80x60 см.",
+        price: "927 750",
+        priceold: "727 750",
+        shield: "Новинка",
+        shieldNew: true
+    },
+    {
+        image: "gallery-img-4.jpg",
+        title: "Распоряжения о структур",
+        author: "Говард Херш",
+        size: "Картина,  80x60 см.",
+        price: "27 750"
+    },
+    {
+        image: "gallery-img-5.jpg",
+        title: "Абстракция, Опус J202",
+        author: "Соколов Виталий",
+        size: "Картина,  80x60 см.",
+        price: "27 750",                        
+    },
+    {
+        image: "gallery-img-6.jpg",
+        title: "Распоряжения о структуре тут длинное название картины ",
+        author: "Екатерина Александровна Преображенская",
+        size: "Картина,  80x60 см.",
+        price: "927 750",
+        priceold: "727 750",
+        shield: "Скидка 20%",
+        shieldDiscount: true
+    },
+    {
+        image: "gallery-img-7.jpg",
+        title: "Растущее действие",
+        author: "Рамина Роуз ",
+        size: "Картина,  80x60 см.",
+        price: "27 750",
+        shield: "Скидка 20%",
+        shieldDiscount: true
+    },
+    {
+        image: "gallery-img-8.jpg",
+        title: "Абстракция, Опус J202",
+        author: "Соколов Виталий",
+        size: "Картина,  80x60 см.",
+        price: "27 750",                        
+    },
+    {
+        image: "gallery-img-9.jpg",
+        title: "Абстракция, Опус J202",
+        author: "Соколов Виталий",
+        size: "Картина,  80x60 см.",
+        price: "27 750",                        
+    }
+]
+
+const innerHtml = innerCard => `
+<div class="gallery__item">
+<div class="gallery-card"> <a class="gallery-card__img" href="#"><img class="gallery-card__image" src="assets/images/${innerCard.image}" alt=""></a>
+  <div class="gallery-card__content"> 
+    <div class="gallery-card__group">
+      <div class="gallery-card__shields">
+        ${innerCard.shieldDiscount ? `<span class="gallery-card__shield gallery-card__shield-discount">${innerCard.shield}</span>`: ''}
+        ${innerCard.shieldNew ? `<span class="gallery-card__shield gallery-card__shield-new">${innerCard.shield}</span>`: ''}</div>
+      <a class="gallery-card__title" href="#">${innerCard.title}</a><a class="gallery-card__author" href="#">${innerCard.author}</a><span class="gallery-card__size">${innerCard.size}</span>
+    </div>
+    <div class="gallery-card__group">
+      <div class="gallery-card__price">
+        <div class="gallery-card__price-block"><span class="gallery-card__price-text">${innerCard.price}<span class="rub">₽</span></span>
+        ${innerCard.priceold ? `<span class="gallery-card__price-old">${innerCard.priceold}</span>` : ''}
+        </div>
+        <div class="gallery-card__price-block"><a class="gallery-card__price-block-favorite js-icon" href="#"> 
+            <svg class="icon favorite">       
+              <use xlink:href="assets/images/favorite-bg-icon2.svg#like"></use>
+            </svg></a><a class="gallery-card__price-block-cart js-icon" href="#"> 
+            <svg class="icon cart">       
+              <use xlink:href="assets/images/cart-bg-icon.svg#cart"></use>
+            </svg></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>`;  
+
+
+    
+ function render() {    
+    const $html = $(cards.map(innerHtml).join(''));
+    // gallery.querySelector('.js-gallery-inner').insertAdjacentHTML('beforeend', html); 
+    $('.js-gallery-masonry').append($html)
+        .masonry( 'appended', $html );
+
+    msnryCreate();    
+} 
+
+
+$('.js-gallery-btn').on('click',  function(e) {    
+    e.preventDefault();   
+    render(); 
+    this.remove();
+    
+});
+
+function msnryCreate() {
+    var msnry = $('.js-gallery-masonry').masonry({
+        // options
+        itemSelector: '.gallery__item',
+        columnWidth: '.gallery__item',
+        gutter: '.js-gallery-gutter',
+        stamp: '.js-gallery-stamp',
+        horizontalOrder: true
+    });
+
+
+    $('.js-gallery-masonry img').on('load', function() {   
+        msnry.masonry();
+    });
+}
+msnryCreate();
+
+
+
+
+
+
+document.querySelectorAll('.js-icon').forEach(item  => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        item.classList.toggle('is-active');
+    })
+})
+// $('.js-styles-slider').slick({
+//     arrows:  false,
+//     // dots: true,
+//     fade: true,
+//     // autoplay: true
+// });
+
+
+$('.js-styles-slider').slick({        
+    //   dots: true,
+      arrows:  true,
+      infinite: false, 
+      variableWidth: false,       
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        
+        {
+          breakpoint: 1279,
+          settings: {
+            // infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            // variableWidth: true, 
+            // dots: true,
+            arrows:  true
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            variableWidth: false,             
+    
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            // dots: true,
+            arrows:  true
+          }
+        }
+        
+      ]
+    });
+$('.js-news-slider').slick({        
+    //   dots: true,
+      arrows:  true,
+      infinite: false, 
+      variableWidth: false,       
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      responsive: [
+        
+        {
+          breakpoint: 1280,
+          settings: {
+            // infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            // variableWidth: true, 
+            // dots: true,
+            arrows:  true
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            variableWidth: false,             
+    
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            // dots: true,
+            arrows:  true
+          }
+        }
+        
+      ]
+    });
+// var rellax = new Rellax('.js-rellax', {
+//     speed: -2,
+//     center: false,
+//     wrapper: null,
+//     round: true,
+//     vertical: true,
+//     horizontal: false
+//   });
+if(document.querySelector('.js-rellax')) {
+var rellax = new Rellax('.js-rellax');
+}
+// select
+if($('.js-select-catalog')) {
+    $('.js-select-catalog').select2({
+        
+    });
+}
+//tabs
+if(document.querySelector('.wrapper-catalog')) {
+const tabsContent = document.querySelectorAll('.js-tabcontent'),
+          tabsParent = document.querySelector('.js-tabheader__parent'),
+          tabs = document.querySelectorAll('.js-tabheader__item');
+
+    function hideTabContent() {
+        tabsContent.forEach(item => {
+            // item.classList.add('hide');
+            item.style.display = "none";
+            item.classList.remove('show');
+        });
+
+        tabs.forEach(item => {
+            item.classList.remove('is-active');
+        });
+    }
+
+    function showTabsContent(i = 0) {
+        tabsContent[i].classList.add('show');
+        // tabsContent[i].classList.remove('hide');
+        tabsContent[i].style.display = "block";
+        tabs[i].classList.add('is-active');
+    }
+
+    hideTabContent();
+    showTabsContent();
+
+    tabsParent.addEventListener('click', (event) => {
+        const target = event.target;
+
+        if(target && target.classList.contains('js-tabheader__item')) {
+            tabs.forEach((item, i) => {
+                if(target == item) {
+                    hideTabContent();
+                    showTabsContent(i);
+                }
+            });
+        }
+    });
+    //accordion-filter-catalog
+
+    function openBTN(btn) {
+        setTimeout(function() {
+            btn.classList.remove('is-active');
+            btn.innerText = 'Развернуть фильтр';
+        }, 300 );         
+    }
+    function closeBtn(btn) {
+        btn.classList.add('is-active');
+        btn.innerText = 'Свернуть фильтр';        
+    }
+    const   rollBtns = document.querySelectorAll('.js-roll-btn');
+
+    for (let rollBtn of rollBtns) {
+
+        rollBtn.addEventListener('click', function(event){
+            event.preventDefault();
+            // rollBtn.classList.toggle('is-active');
+                
+            var accordionContent = document.querySelector('.section-filter__tabs-inner');
+            
+            if(accordionContent.classList.contains('is-active') && rollBtn.classList.contains('is-active')){            
+                accordionContent.classList.remove('is-active');
+                accordionContent.style.maxHeight = null;
+                
+                openBTN(document.querySelector('.section-filter__tabs-btn-roll')); 
+                openBTN(document.querySelector('.section-filter__btn-roll')); 
+            } else {
+                accordionContent.classList.add('is-active');        
+                closeBtn(document.querySelector('.section-filter__tabs-btn-roll'));
+                closeBtn(document.querySelector('.section-filter__btn-roll'));
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                setTimeout(function() {accordionContent.style.maxHeight = null;}, 400 );
+            }       
+
+        });
+    }
+
+//radioBtnsClick
+document.querySelectorAll('.js-radio-checked').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        if(btn.checked && btn.classList.contains('checked')) {
+            btn.classList.remove('checked');
+        } else {
+            btn.classList.add('checked');
+        }
+    });
+});
+
+// searchAuthorDrop
+
+
+document.querySelector('.section-filter__tabs-main-select').onchange = function(e) {
+    let optSelected = this.selectedOptions;
+    let selected = Array.from(this.options)
+    .filter(option => option.selected)
+    .map(option => option.innerText);
+
+    const parentOptions = document.querySelector('.section-filter__options-drop-item');
+    const sortArr = (arr) => {
+        arr.sort();
+    };
+    function createOption(options, parent){
+        sortArr(options);
+        parentOptions.innerHTML = "";
+        options.forEach(option => {
+            parent.innerHTML += `<span class="section-filter__options-drop-option">${option}</span>`;
+           
+        });
+        document.querySelectorAll('.section-filter__options-drop-option').forEach((optionDrop, i) => {
+            optionDrop.addEventListener('click', (e) => {                
+                optionDrop.remove();
+                optSelected[i].selected = false;
+                options.splice(i, 1);
+                createOption(options, parent);
+                // console.log(options);
+                // console.log(optSelected[i]);
+                // console.log(optSelected);
+            });
+        });
+    }
+    createOption(selected, parentOptions);
+    
+};
+
+
+
+      
+
+//accordion-filterForm-catalog-mobile
+document.querySelector('.js-top-mobile').addEventListener('click', function(event){
+        
+    var accordionContent = this.nextElementSibling;
+    
+    if(accordionContent.classList.contains('is-active')){            
+        accordionContent.classList.remove('is-active');
+        
+    } else {
+        accordionContent.classList.add('is-active');
+    }       
+
+});
+//titleClick-catalog-mobile
+
+for (var title of document.querySelectorAll('.js-tabheader__item-mobile')) { 
+    title.addEventListener('click', function(){
+        var accordionContent = this.nextElementSibling;
+        accordionContent.classList.toggle('is-active');  
+    });
+    
+}
+//inputs
+
+
+var custom_values = ['S', 'M', 'L', 'XL', 'XXL'];
+$(".js-input-size").ionRangeSlider({
+    type: "double",
+    grid: true,        
+    values: custom_values,
+    from: custom_values.indexOf('M'),
+    to: custom_values.indexOf('XL')
+});
+
+
+var $range = $(".js-input-main"),
+    $inputFrom = $(".js-input-from"),
+    $inputTo = $(".js-input-to"),
+    instance,
+    min = 0,
+    max = 600000,
+    from = 0,
+    to = 0;
+
+$range.ionRangeSlider({
+	skin: "round",
+    type: "double",
+    min: min,
+    max: max,
+    from: 23000,
+    to: 299000,
+    onStart: updateInputs,
+    onChange: updateInputs
+});
+instance = $range.data("ionRangeSlider");
+
+function updateInputs (data) {
+	from = data.from;
+    to = data.to;
+    
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);	
+}
+
+$inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+    
+    // validate
+    if (val < min) {
+        val = min;
+    } else if (val > to) {
+        val = to;
+    }
+    
+    instance.update({
+        from: val
+    });
+});
+
+$inputTo.on("input", function () {
+    var val = $(this).prop("value");
+    
+    // validate
+    if (val < from) {
+        val = from;
+    } else if (val > max) {
+        val = max;
+    }
+    
+    instance.update({
+        to: val
+    });
+});
+
+
+
+}
+
+
+    
+    
+    
+
+$('.js-popular-filters-slider').slick({        
+    //   dots: true,
+      arrows:  true,
+      infinite: false, 
+      variableWidth: false,       
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      responsive: [
+        
+        {
+          breakpoint: 1279,
+          settings: {
+            // infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            // variableWidth: true, 
+            // dots: true,
+            arrows:  true
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            variableWidth: false,             
+    
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            // dots: true,
+            arrows:  true
+          }
+        }
+        
+      ]
+    });
+if(document.querySelector('.section-product-card')) {
+//slider-section-product-card
+
+$('.js-card-big-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    adaptiveHeight: true,
+    asNavFor: '.js-card-small-slider',
+    responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            arrows: false
+          }
+        }
+    ]
+  });
+  $('.js-card-small-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.js-card-big-slider',
+    dots: false,
+    arows: false,
+    vertical: true,
+    // centerMode: true,
+    focusOnSelect: true,
+    responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            vertical: false,
+            centerMode: true,
+            // centerPadding: '40px',
+            // slidesToShow: 1
+          }
+        }
+    ]
+  });
+
+  //accordion-section-product-card
+
+  const accordionBtns = document.querySelectorAll('.js-accordion-card-btn');
+
+  for (let btn of accordionBtns) {
+    btn.addEventListener('click', (e) => {
+      let accordionContent = btn.nextElementSibling;
+      if(accordionContent.classList.contains('is-active')) {
+        btn.classList.remove('is-active');
+        accordionContent.classList.remove('is-active');
+        // accordionContent.style.maxHeight = '0';
+      
+
+      } else {
+        btn.classList.add('is-active');
+        accordionContent.classList.add('is-active');
+        // accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+        // setTimeout(function() {accordionContent.style.maxHeight = '100%';}, 100 );
+      }
+    });
+  }
+
+  //like-icon-change-section-product-card
+
+  for (let likeIcon of document.querySelectorAll('.js-like-btn')) {
+    likeIcon.addEventListener('click', (e) => {
+      e.preventDefault();
+      const spanLike = likeIcon.querySelector('span');
+      
+      if(likeIcon.classList.contains('is-active')) {
+        likeIcon.classList.remove('is-active');
+        spanLike.innerText = "В избранное";
+      } else {
+        likeIcon.classList.add('is-active');
+        spanLike.innerText = "В избранном";
+      }
+    });
+  }
+
+  //poopup-zoom
+ 
+
+
+const lightbox = new FsLightbox();
+function lightboxImg() {
+  let arr = [];
+  document.querySelectorAll('.section-product-card__images-big-item-img').forEach( function(element) {
+    arr.push(element.getAttribute('src'));
+ });
+ return arr;
+ 
+}
+// lightbox.props.sources = ['assets/images/card-img.jpg', 'assets/images/video-img-main.jpg', 'assets/images/main-bg.jpg'];
+lightbox.props.sources = lightboxImg();
+// lightbox.props.onInit = () => console.log('Lightbox initialized!');
+
+document.querySelector('.js-zoom-btn ').addEventListener('click', (e) => {
+  
+  // lightbox.open();
+  // const lightbox = new FsLightbox();
+    document.querySelectorAll('.section-product-card__images-big-item.slick-slide').forEach((item, i) => {
+    
+    if(item.classList.contains('slick-current')) {
+      
+      // fsLightboxInstances['fs-img'].open(i);
+      lightbox.open(i);
+
+    }
+  });
+});
+
+
+
+}
+
+
 // const body = document.querySelector('body');
 const popupForm = document.createElement('div');
 popupForm.classList.add('popup-form', 'js-popupform');
@@ -290,6 +1054,9 @@ $(this).validate({
     } 
   });
 });
+
+
+
 
 
 
